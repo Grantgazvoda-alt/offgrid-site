@@ -80,6 +80,14 @@
   .tier .per{color:var(--muted);font-size:13px}
   .tier ul{margin:16px 0 0;padding-left:18px;color:var(--muted);font-size:14px}
   .tier li{margin:6px 0}
+  .tier-btn{display:block;width:100%;margin-top:20px;padding:10px 0;text-align:center;border-radius:6px;font-size:14px;font-weight:600;text-decoration:none;transition:background .2s}
+  .tier-btn-ghost{border:1px solid var(--line);color:var(--fg)}
+  .tier-btn-ghost:hover{border-color:var(--muted);background:rgba(255,255,255,.05)}
+  .tier-btn-primary{background:var(--acc);color:#0b1c10;border:1px solid var(--acc)}
+  .tier-btn-primary:hover{background:var(--green)}
+  .concierge-card{margin-top:24px;background:var(--panel);border:1px solid var(--acc);border-radius:12px;padding:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+  .concierge-card h3{margin:0 0 6px;color:var(--acc);font-size:18px}
+  .concierge-card p{margin:0;color:var(--muted);max-width:540px;font-size:14px}
   .roi{max-width:1000px}
   .roi iframe{width:100%;height:900px;border:1px solid var(--line);border-radius:12px;background:var(--bg)}
   .trust{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:24px}
@@ -142,17 +150,29 @@
       <h3>Community</h3>
       <div class="price">$0</div><div class="per">forever · open source</div>
       <ul><li>3 concurrent jobs</li><li>500 queued</li><li>All providers</li><li>Dashboard + API</li></ul>
+      <a class="tier-btn tier-btn-ghost" href="https://github.com/Grantgazvoda-alt/offgrid" target="_blank" rel="noopener" onclick="try{trackEvent('buy_click',{tier:'community'})}catch(e){}">Deploy Free Core</a>
     </div>
     <div class="tier featured">
       <h3>Pro</h3>
       <div class="price">$39<span class="per">/mo</span></div><div class="per">$32/mo billed yearly</div>
       <ul><li>12 concurrent jobs</li><li>Unlimited queue</li><li>Priority lane</li><li>Tuning + backups</li></ul>
+      <a class="tier-btn tier-btn-primary" href="mailto:GrantGazvoda@icloud.com?subject=OffGrid%20Pro%20License%20Order%20(%2439%2Fmo)&amp;body=Hi%20Grant%2C%0A%0AI%20want%20to%20order%20an%20OffGrid%20Pro%20license%20(%2439%2Fmo).%0AName%3A%20%0AWorkload%3A%20%0APayment%20preference%20(Stripe%20invoice%20%2F%20card%20%2F%20crypto)%3A%20" onclick="try{trackEvent('buy_click',{tier:'pro'})}catch(e){}">Get Pro License ($39/mo)</a>
     </div>
     <div class="tier">
       <h3>Studio</h3>
       <div class="price">$149/mo</div><div class="per">$124/mo billed yearly</div>
       <ul><li>5 nodes / 48 concurrent</li><li>5 team seats</li><li>Per-team API keys</li><li>Priority support</li></ul>
+      <a class="tier-btn tier-btn-ghost" href="mailto:GrantGazvoda@icloud.com?subject=OffGrid%20Studio%20License%20Order%20(%24149%2Fmo)&amp;body=Hi%20Grant%2C%0A%0AI%20want%20to%20order%20an%20OffGrid%20Studio%20license%20(%24149%2Fmo).%0ATeam%20name%3A%20%0ANodes%3A%20%0AVolume%3A%20" onclick="try{trackEvent('buy_click',{tier:'studio'})}catch(e){}">Get Studio License ($149/mo)</a>
     </div>
+  </div>
+
+  <!-- Concierge upsell -->
+  <div class="concierge-card">
+    <div>
+      <h3>"We Install It On Your Box" — Concierge Setup ($500 flat)</h3>
+      <p>Non-technical studio? We SSH into your cloud VM, RunPod cluster, or local workstation, deploy OffGrid, configure your providers, tune your queue, and run your first 100 clips live with you.</p>
+    </div>
+    <a class="cta-primary" style="display:inline-block;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:700;color:#0b1c10;white-space:nowrap" href="mailto:GrantGazvoda@icloud.com?subject=OffGrid%20Concierge%20Setup%20Booking%20(%24500)&amp;body=Hi%20Grant%2C%0A%0AI%27d%20like%20to%20book%20a%20concierge%20setup%20(%24500%20flat).%0AEnvironment%3A%20%0ATimeline%3A%20" onclick="try{trackEvent('buy_click',{tier:'concierge'})}catch(e){}">Book Concierge Setup ($500)</a>
   </div>
 </section>
 
